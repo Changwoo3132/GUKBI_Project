@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="AdminProduct">
+	
+	<!-- 상의 개수 -->
+	<select id="p1_count" resultType="int">
+		select count (*) from product
+		<where> <!--  검색조건에 의한 검색기능 -->
+			<if test="find_field == null or find_field == ''">
+				catecode = 1
+			</if> <!-- 검색을 안한경우는 총 레코드개수를 반환 -->
+			<if test="find_field == 'procode'"> <!--  제목 검색 -->
+				procode like #{find_name} <!-- like는 ~와 비슷한 레코드를 검색하게 하는 검색 연산자이다. -->
+			</if>
+			<if test="find_field == 'proname'"> <!-- 내용 검색 -->
+				proname like #{find_name}
+			</if>
+		</where>
+	</select>
+	
+	<!-- 상의 리스트 페이징 목록 -->
+	  <select id="p1_list" resultType="product">
+	    select * from (select rowNum rNum, procode, proname, proprice from (select * from product
+		
+		<where>
+			<if test="find_field == null or find_field == ''">
+				catecode = 1
+			</if>
+			<if test="find_field == 'procode'">
+				procode like #{find_name}
+			</if>
+			<if test="find_field == 'proname'">
+				proname like #{find_name}
+			</if>
+		</where>
+		
+		order by procode desc)) where rNum &gt;= #{startrow} and rNum &lt;= #{endrow}
+		
+	</select>
+	
+	<!-- 하의 개수 -->
+	<select id="p2_count" resultType="int">
+		select count (*) from product
+		<where> <!--  검색조건에 의한 검색기능 -->
+			<if test="find_field == null or find_field == ''">
+				catecode = 2
+			</if> <!-- 검색을 안한경우는 총 레코드개수를 반환 -->
+			<if test="find_field == 'procode'"> <!--  제목 검색 -->
+				procode like #{find_name} <!-- like는 ~와 비슷한 레코드를 검색하게 하는 검색 연산자이다. -->
+			</if>
+			<if test="find_field == 'proname'"> <!-- 내용 검색 -->
+				proname like #{find_name}
+			</if>
+		</where>
+	</select>
+	
+	<!-- 하의 리스트 -->
+	<select id="p2_list" resultType="product">
+		select * from (select rowNum rNum, procode, proname, proprice from (select * from product
+		
+		<where>
+			<if test="find_field == null or find_field == ''">
+				catecode = 2
+			</if>
+			<if test="find_field == 'procode'">
+				procode like #{find_name}
+			</if>
+			<if test="find_field == 'proname'">
+				proname like #{find_name}
+			</if>
+		</where>
+		
+		order by procode desc)) where rNum &gt;= #{startrow} and rNum &lt;= #{endrow}
+	</select>
+	
+	<!-- 아우터 개수 -->
+	<select id="p3_count" resultType="int">
+		select count (*) from product
+		<where> <!--  검색조건에 의한 검색기능 -->
+			<if test="find_field == null or find_field == ''">
+				catecode = 3
+			</if> <!-- 검색을 안한경우는 총 레코드개수를 반환 -->
+			<if test="find_field == 'procode'"> <!--  제목 검색 -->
+				procode like #{find_name} <!-- like는 ~와 비슷한 레코드를 검색하게 하는 검색 연산자이다. -->
+			</if>
+			<if test="find_field == 'proname'"> <!-- 내용 검색 -->
+				proname like #{find_name}
+			</if>
+		</where>
+	</select>
+	
+	<!-- 아우터 리스트 -->
+	<select id="p3_list" resultType="product">
+		select * from (select rowNum rNum, procode, proname, proprice from (select * from product
+		
+		<where>
+			<if test="find_field == null or find_field == ''">
+				catecode = 3
+			</if>
+			<if test="find_field == 'procode'">
+				procode like #{find_name}
+			</if>
+			<if test="find_field == 'proname'">
+				proname like #{find_name}
+			</if>
+		</where>
+		
+		order by procode desc)) where rNum &gt;= #{startrow} and rNum &lt;= #{endrow}
+	</select>
+	
+	<!-- 신발 개수 -->
+	<select id="p4_count" resultType="int">
+		select count (*) from product
+		<where> <!--  검색조건에 의한 검색기능 -->
+			<if test="find_field == null or find_field == ''">
+				catecode = 4
+			</if> <!-- 검색을 안한경우는 총 레코드개수를 반환 -->
+			<if test="find_field == 'procode'"> <!--  제목 검색 -->
+				procode like #{find_name} <!-- like는 ~와 비슷한 레코드를 검색하게 하는 검색 연산자이다. -->
+			</if>
+			<if test="find_field == 'proname'"> <!-- 내용 검색 -->
+				proname like #{find_name}
+			</if>
+		</where>
+	</select>
+	
+	<!-- 신발 리스트 -->
+	<select id="p4_list" resultType="product">
+		select * from (select rowNum rNum, procode, proname, proprice from (select * from product
+		
+		<where>
+			<if test="find_field == null or find_field == ''">
+				catecode = 4
+			</if>
+			<if test="find_field == 'procode'">
+				procode like #{find_name}
+			</if>
+			<if test="find_field == 'proname'">
+				proname like #{find_name}
+			</if>
+		</where>
+		
+		order by procode desc)) where rNum &gt;= #{startrow} and rNum &lt;= #{endrow}
+	</select>
+	
+	<!-- 상품 등록 -->
+	<insert id="p_in">
+		insert into product (PROCODE, PRONAME, PROPRICE, PROINFO , prostate, PROQTY, profile, prodate, CATECODE)
+		values (product_code_seq.nextval, #{proname}, #{proprice}, #{proinfo}, #{prostate}, #{proqty}, #{profile}
+		, sysdate, #{catecode})
+	</insert>
+	
+	<!-- 카테고리 별 상품 정보 보기 -->
+	<select id="p_cont" resultType="product">
+		select * from product where procode = #{procode}
+	</select>
+	
+	<!-- 상품 정보 수정 -->
+	<update id="p_edit" parameterType="product">
+		update product set proname=#{proname}, proprice=#{proprice}, proinfo=#{proinfo}, prostate=#{prostate}
+		, proqty=#{proqty}, profile=#{profile}, prodate=sysdate, catecode=#{catecode} where procode=#{procode}
+	</update>
+	
+	<!-- 상품 삭제 -->
+	<delete id="p_del" parameterType="int">
+		delete product where procode=#{procode}
+	</delete>
+	
+</mapper>

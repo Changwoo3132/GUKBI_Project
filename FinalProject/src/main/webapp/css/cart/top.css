@@ -1,0 +1,58 @@
+/* styles.css */
+
+/* 전반적인 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 메인 콘텐츠 스타일 */
+main {
+    padding: 20px;
+}
+
+/* styles.css */
+
+/* 아우터 목록 스타일 */
+.outerwear-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 한 줄에 3개의 열 */
+    gap: 20px;
+}
+
+.outerwear-item {
+
+    padding: 10px;
+    text-align: center;
+}
+
+.outerwear-item img {
+    max-width: 100%;
+}
+
+.outerwear-item h2 {
+    margin-top: 10px;
+}
+
+.outerwear-item p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.outerwear-item span {
+    font-weight: bold;
+}
+
+.outerwear-item button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.outerwear-item button:hover {
+    background-color: #0056b3;
+}

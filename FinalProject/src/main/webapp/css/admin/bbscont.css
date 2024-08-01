@@ -1,0 +1,101 @@
+/* Reset some basic elements for consistency across browsers */
+body, h2, table, th, td, form, input, button, a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Main container */
+#bsC_wrap {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Header and title */
+.bsC_title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+/* Table styling */
+#bsC_t {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#bsC_t th, #bsC_t td {
+    padding: 10px 50px;
+    
+}
+
+#bsC_t th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+}
+
+#bsC_t td {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Menu button styling */
+#bsC_menu {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#bsC_menu button, #bsC_menu input[type="button"] {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#bsC_menu button:hover, #bsC_menu input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #bsC_wrap {
+        padding: 10px;
+    }
+
+    .bsC_title {
+        font-size: 20px;
+    }
+
+    #bsC_t th, #bsC_t td {
+        font-size: 14px;
+    }
+
+    #bsC_menu button, #bsC_menu input[type="button"] {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}

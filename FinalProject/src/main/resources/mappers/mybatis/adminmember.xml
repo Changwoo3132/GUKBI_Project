@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="AdminMember">
+
+    <select id="GetRowCount" parameterType="page" resultType="int" >
+        select count(MID) from MEMBER
+        <where>
+            <if test="find_field == ''"></if>
+            <if test="find_field == 'mid'">mid like #{find_name}
+            </if>
+            <if test="find_field == 'mname'">mname like #{find_name}</if>
+        </where>
+    </select>
+
+    <select id="GetMemberList" parameterType="page" resultType="member" >
+        select * from (select rowNum rNum, MID, MNAME, MPHONE, MSTATE, MDATE from
+        (select * from MEMBER
+        <where>
+            <if test="find_field == ''"></if>
+            <if test="find_field == 'mid'">mid like #{find_name}</if>
+            <if test="find_field == 'mname'">mname like #{find_name}</if>
+        </where>
+        order by mid asc))
+        where rNum &gt;= #{startrow} and rNum &lt;= #{endrow}
+    </select>
+
+    <select id="GetMemberInfo" resultType="member" parameterType="page">
+        select * from MEMBER where MID=#{mid}
+    </select>
+
+    <delete id="MemberDel">
+        delete MEMBER where MID=#{mid}
+    </delete>
+</mapper>

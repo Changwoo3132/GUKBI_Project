@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+.right_contents_border_none:after {
+  clear: both;
+  display: block;
+  content: "";
+}
+
+.section_container {
+  position: relative;
+}
+
+table,th,td {
+    border-spacing: 0
+}
+
+.table_basic {
+  clear: both;
+  min-width: 920px;
+  text-align: center;
+  background: #fff;
+  width: 85%;
+}
+
+.table_basic tr {
+  border: 1px solid #ddd;
+}
+
+.table_basic th {
+  vertical-align: middle;
+  padding: 10px 0;
+}
+
+.table_basic td {
+  line-height: 16.8px;
+  padding: 14px 0;
+}
+
+.table_basic td.empty_cart {
+  vertical-align: middle;
+}
+
+.table_basic .txt_subject {
+  text-align: left;
+}
+
+.table_basic .border_right_none {
+  border-right: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+.table_basic .tit_contents_td {
+  color: #999;
+  text-align: left;
+}
+
+button:active,button:focus {
+    outline: none
+}
+
+.right_contents {
+    font-size: 12px;
+    color: #000;
+}
+
+ol,ul {
+    list-style: none
+}
+
+fieldset {
+    border: 0 solid rgba(0,0,0,0)
+}
+
+img {
+    border: none;
+    line-height: 0;
+    vertical-align: top
+}
+
+table {
+    border-collapse: collapse
+}
+.PcMenuBox {
+	display: block;
+}
+table,th,td {
+    border-spacing: 0
+}
+
+input,textarea,select {
+    color: #000;
+    vertical-align: middle;
+    border: 0;
+    border-radius: 0;
+    outline: none
+}
+
+button {
+    appearance: none;
+    font-family: inherit;
+    font-size: inherit;
+    border: 0;
+    cursor: pointer;
+    background: none
+}
+
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+em {
+    font-style: normal
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+.right_contents {
+	padding: 20px;
+	margin-left: 250px;
+	padding-bottom: 17px;
+	height: 543px;
+}
+
+.QuestionLeftMenu {
+	position: absolute;
+	top: 130px;
+	width: 158px;
+	margin-left: 80px;
+}
+
+.QuestionLeftMenu ul li {
+	margin-bottom: 60px;
+	position: relative;
+}
+
+.QuestionLeftMenu ul li:last-child {
+	margin-bottom: 0;
+}
+
+.QuestionLeftMenu ul li a {
+	font-weight: 500;
+	width: fit-content;
+	display: block;
+	font-size: 12px;
+	font-weight: 500;
+	color: #000;
+	text-decoration: none;
+}
+
+.QuestionLeftMenu ul li a:hover {
+	text-decoration: unset;
+}
+
+.QuestionLeftMenu ul li a:after {
+	content: "";
+	position: relative;
+	display: block;
+	bottom: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #000;
+	-webkit-transform: scaleX(0);
+	-ms-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transform-origin: 100% 0;
+	-ms-transform-origin: 100% 0;
+	transform-origin: 100% 0;
+	-webkit-transition: -webkit-transform .3s
+		cubic-bezier(.45, .46, .05, .96);
+	-o-transition: transform .3s cubic-bezier(.45, .46, .05, .96);
+	transition: transform .3s cubic-bezier(.45, .46, .05, .96);
+	transition: transform .3s cubic-bezier(.45, .46, .05, .96),
+		-webkit-transform .3s cubic-bezier(.45, .46, .05, .96);
+}
+
+.QuestionLeftMenu ul li a:hover:after {
+	-webkit-transform: scaleX(1);
+	-ms-transform: scaleX(1);
+	transform: scaleX(1);
+	-webkit-transform-origin: 0 0;
+	-ms-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transition: -webkit-transform .5s
+		cubic-bezier(.45, .46, .05, .96);
+	-o-transition: transform .5s cubic-bezier(.45, .46, .05, .96);
+	transition: transform .5s cubic-bezier(.45, .46, .05, .96);
+	transition: transform .5s cubic-bezier(.45, .46, .05, .96),
+		-webkit-transform .5s cubic-bezier(.45, .46, .05, .96);
+}
+
+.QuestionLeftMenu ul li img {
+	width: 12px;
+	height: 16px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}

@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+.container {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inquiry-popup, .inquiry-board {
+    background-color: #fff;
+    /* margin-top: 30px; */
+    padding: 20px;
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 38px;
+}
+
+.form-group label {
+    width: 100px;
+    margin-right: 10px;
+    color: #555;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.radio-group label {
+    margin-right: 15px;
+    /*margin-bottom: 5px;*/
+}
+
+#inquiryTitle {
+    width: calc(61% - 10px); /* 문의 제목을 반으로 줄임 */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#inquiryContent {
+    width: 70%;
+    height: 230px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.secret-label {
+    margin-left: 10px;
+}
+
+.form-actions {
+    text-align: center;
+}
+
+.form-actions > button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #ccc;
+    color: #000;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button[type="reset"] {
+    background-color: #ccc;
+    color: #000;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button[type="reset"]:hover {
+    background-color: #5a6268;
+}
+
+.inquiry-board ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.inquiry-board li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.inquiry-board li span {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.form-group input[type="file"] {
+    align: right;
+}
+
+.form-group label[for="imageUpload"] {
+    width: 60px;
+    height: 30px;
+    background-color: white;
+    border: 0;
+}

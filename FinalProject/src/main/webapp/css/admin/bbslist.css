@@ -1,0 +1,124 @@
+/* bbslist.css */
+
+
+#aMain_cont {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bList_title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.bList_count {
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+#bList_t {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#bList_t th, #bList_t td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#bList_t th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+#bList_t tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#bList_t tr:hover {
+    background-color: #f1f1f1;
+}
+
+.left-align {
+    text-align: left;
+}
+ 
+#bList_paging {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#bList_paging a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0 5px;
+}
+
+#bList_paging a:hover {
+    text-decoration: underline;
+}
+
+#bList_menu {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#bList_menu input {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#bList_menu input:hover {
+    background-color: #0056b3;
+}
+
+#bFind_wrap {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#bFind_wrap select, #bFind_wrap input[type="text"] {
+    padding: 10px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+#bFind_wrap input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #ccc;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+#bFind_wrap input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #d1d1d1;
+    
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d32f2f;
+}

@@ -1,0 +1,60 @@
+
+main{
+	padding:20px;
+}
+
+.outerwear-container {
+	
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);/*한줄에 3개의 열씩*/
+    
+    gap: 20px;
+   
+}
+
+.outerwear-item {
+    background: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+     font-size: 14px;
+    margin-left:30px;
+    
+}
+
+
+
+.outerwear-item img {
+    max-width: 100%;
+    height: auto;
+   
+}
+
+.outerwear-item h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.outerwear-item h3 a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+     font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.outerwear-item h3 a:hover {
+    color: #ccc;
+}
+
+.outerwear-item span {
+	text-align: center;
+    display: block;
+    margin: 15px;
+    font-size: 16px;
+    color:black;
+    font-weight: bold;
+}

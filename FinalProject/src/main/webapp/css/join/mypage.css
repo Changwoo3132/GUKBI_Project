@@ -1,0 +1,124 @@
+/* mypage.css */
+
+@font-face {
+    font-family: 'SokchoBadaDotum';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/SokchoBadaDotum.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ownglyph_Dailyokja-Rg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/Ownglyph_Dailyokja-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+@font-face {
+    font-family: 'Ownglyph_meetme-Rg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mypageWrap{
+	/*font-family:'Ownglyph_Dailyokja-Rg';*/
+	font-size:24px;
+    /*border-top:1px solid #d1d1d1;*/
+}
+
+.Logout {
+    float: right;
+    background: black;
+    border: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: white;
+}
+
+h1 {
+    color: #333;
+    margin-top: 20px;
+}
+
+.section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+    max-width: 600px;
+}
+
+h2 {
+    color: #444;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group>label {
+    width: 100px; /* 레이블의 너비를 설정 */
+    color: #555;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    flex: 1; /* 입력 필드가 남은 공간을 차지하도록 설정 */
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 20%; /* 버튼의 너비를 30%로 설정 */
+    max-width: 200px; /* 최대 너비를 200px로 설정 */
+    align-self:center; /* 버튼이 왼쪽 정렬되도록 설정 */
+    font-family: 'Ownglyph_Dailyokja-Rg';
+}
+
+button[type="submit"]:hover {
+    background-color: #660066;
+    font-family: 'Ownglyph_Dailyokja-Rg';
+    
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #f9f9f9;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #f1f1f1;
+    color: #333;
+}

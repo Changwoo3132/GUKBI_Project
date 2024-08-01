@@ -1,0 +1,174 @@
+/* 기본 설정 */
+
+@font-face {
+    font-family: 'KCC-Hanbit';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/KCC-Hanbit.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 장바구니 컨테이너 */
+.cart-container {
+    font-family:'KCC-Hanbit';
+    color: #333;
+    width: 120%;
+    max-width: 1200px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+    padding-bottom: 100px;;
+    /*box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);*/
+}
+
+/* 제목 스타일 */
+h1 {
+    text-align: center;
+    color: #444;
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+
+/* 테이블 스타일 */
+.cart-table, .summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td, .summary-table td {
+    /*border: 1px solid #eaeaea;*/
+    padding: 15px;
+    text-align: center;
+}
+
+.cart-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    color: #666;
+}
+
+.cart-table td img.product-image {
+    width: 80px;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* 수량 입력 스타일 */
+.quantity-input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* 버튼 스타일 */
+.order-button, .remove-button {
+    /*display: block;*/
+    margin: 5px 0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    
+}
+
+.order-button {
+    background-color: #fff;
+}
+
+.order-button:hover {
+    background-color: #ccc;
+}
+
+.remove-button {
+    background-color: #fff;
+}
+
+.remove-button:hover {
+    background-color: #ccc;
+}
+
+/* 합계 스타일 */
+.total {
+    text-align: right;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.total .total-amount {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* 요약 테이블 스타일 */
+.summary-container {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.summary-table {
+    width: 100%;
+    border: none;
+}
+
+.summary-table td {
+    border: none;
+    /*padding: 10px 15px;*/
+    font-size: 1em;
+}
+
+.summary-table td:first-child, .summary-table td:nth-child(3), .summary-table td:nth-child(5) {
+    text-align: right;
+    font-weight: bold;
+}
+
+.summary-table .summary-amount, .summary-table .summary-total-amount {
+    text-align: left;
+    /*padding-left: 10px;*/
+    font-weight: bold;
+}
+
+.summary-table .summary-total-amount {
+    color: #e74c3c;
+    font-size: 1.2em;
+}
+
+/* 하단 버튼 스타일 */
+.actions {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.actions button {
+    background-color: #3498db;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.actions button.continue-shopping {
+    background-color: #fff;
+}
+
+.actions button.checkout {
+    background-color: #fff;
+}
+
+.actions button:hover {
+    opacity: 0.9;
+    background-color: #ccc;
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="Member">
+
+    <!-- 회원가입 -->
+    <insert id="Joinmember">
+        insert into MEMBER (MID, MPWD, MPWDC, MEMAIL, MNAME, MDAY, MPHONE, MYADDR, MYADDR2, ADDRCODE, MSTATE, MDATE)
+        VALUES (#{mid}, #{mpwd}, #{mpwdC}, #{memail}, #{mname}, #{mday}, #{mphone}, #{myaddr}, #{myaddr2}, #{addrcode}, 1, sysdate)
+    </insert>
+
+    <!-- 로그인 -->
+    <select id="Logincheck" resultType="member" parameterType="net.daum.vo.MemberVO">
+        select * from MEMBER where MID=#{mid} and MSTATE = 1
+    </select>
+
+    <select id="Mypage" parameterType="net.daum.vo.MemberVO" resultType="member">
+        select * from MEMBER where MID=#{mid}
+    </select>
+
+    <update id="Usereditok">
+        update member set MNAME=#{mname}, MEMAIL=#{memail}, MPHONE=#{mphone}, ADDRCODE=#{addrcode}, MYADDR=#{myaddr}, MYADDR2=#{myaddr2} where MID=#{mid}
+    </update>
+
+</mapper>

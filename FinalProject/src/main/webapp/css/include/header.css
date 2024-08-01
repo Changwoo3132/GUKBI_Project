@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+/* 폰트 */
+@font-face {
+    font-family: 'MoveSans-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/MoveSans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    min-width: 1410px;
+}
+
+header {
+    color: #fff;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+header>div:nth-child(odd) {
+    flex: 2;
+}
+
+.MainLogo{
+    padding-top: 10px;
+    height: 40px;
+    text-align: center;
+}
+
+.MainLogo>a>strong{
+    font-family: 'MoveSans-Bold';
+    font-size: 20px;
+    color: black;
+    /*border-bottom: 1px solid black;*/
+    cursor: pointer;
+}
+
+nav.cartrightnav {
+    overflow: hidden;
+}
+
+nav.cartrightnav>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav.cartrightnav>ul>li {
+    display: inline-block;
+    margin-right: 10px;
+    padding-top: 15px;
+}
+
+nav.cartrightnav>ul>li>a {
+    color: black;
+    text-decoration: none;
+}
+
+ul.CartLeft {
+    float: left;
+    padding: 0;
+    padding-left: 10px;
+    margin: 0;
+    list-style: none;
+}
+
+ul.CartLeft>.cart {
+    padding-top: 15px;
+}
+
+nav.cartrightnav ul.CartRight {
+    float: right;
+}
+
+#btn{
+    background-color: white;
+    border:none;
+    padding: 0;
+}
+
+.SearchBtn {
+    background-color:white;
+}
+
+#search-bg {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    background-color:white;
+    text-align: center;
+    transition: all 0.5s;
+    height: 0;
+    overflow: hidden;
+    left: -1px;
+    margin-top: 22px;
+}
+
+#search-bg input {
+    width: 70%;
+    margin-top: 50px;
+    height: 50px;
+    background-color: transparent;
+    font-size: 1.2rem;
+    border-width: 0 0 1px;
+}
+
+#search-bg input:focus {
+    outline: none;
+}
+
+#search-bg.toggle {
+    height: 200px;
+    transition: all 0.2s;
+    border-top: 1px solid #d1d1d1;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+#cartbtn{
+    background-color: white;
+    border:none;
+}
+
+.CartBtn{
+    background-color:white;
+}
+
+#cart-bg {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    background-color:white;
+    transition: all 0.5s;
+    height: 0;
+    overflow: hidden;
+    left: -1px;
+    margin-top: 22px;
+}
+
+#cart-bg nav {
+    width: 70%;
+    margin-top: 10px;
+    height: 30px;
+    background-color: transparent;
+    border-width: 0 0 1px;
+}
+
+#cart-bg nav:focus {
+    outline: none;
+}
+
+#cart-bg.toggle {
+    height: 20%;
+    transition: all 0.2s;
+    border-top: 1px solid #d1d1d1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 1410px;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.MainLogo>a{
+    text-decoration: none;
+}
+
+.HeaderCart>h3{
+    margin-bottom: 9px;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.HeaderCart{
+    border-bottom: 1px solid #d1d1d1;
+    text-align: center;
+    padding: 0 50px;
+}
+
+.HeaderItem{
+    margin-top: 7px;
+    margin-bottom: 10px;
+}
+
+.HeaderItem>a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.HeaderItem{
+    text-align: center;
+}
+
+.HCartList{
+    padding:0;
+}

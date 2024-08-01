@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="Product">
+
+	<!-- 상의 리스트 가져오기 -->
+	<select id="top_list" resultType="product">
+		select * from product where
+		catecode=1
+	</select>
+
+	<!-- 하의 리스트 가져오기 -->
+	<select id="bottom_list" resultType="product">
+		select * from product where
+		catecode=2
+	</select>
+
+	<!-- 아우터 리스트 가져오기 -->
+	<select id="outer_list" resultType="product">
+		select * from product where
+		catecode=3
+	</select>
+
+	<!-- 신발 리스트 가져오기 -->
+	<select id="shoes_list" resultType="product">
+		select * from product where
+		catecode=4
+	</select>
+
+	<!-- 장바구니 등록 -->
+	<insert id="cart_in">
+		insert into cart (cartcode, amount, mid, procode)
+		values (cart_cartcode_seq.nextval, #{amount}, #{mid}, #{procode})
+	</insert>
+
+	<!-- resultMap 정의 -->
+	<resultMap id="CartResultMap" type="cart">
+		<!-- cart 테이블의 필드 매핑 -->
+		<id property="cartcode" column="cartcode" />
+		<result property="amount" column="amount" />
+		<result property="mid" column="mid" />
+		<result property="procode" column="procode" />
+
+		<!-- member 테이블과의 JOIN 매핑 -->
+		<association property="member" javaType="member">
+			<id property="mid" column="mid" />
+			<result property="mname" column="mname" />
+			<result property="memail" column="memail" />
+			<result property="mphone" column="mphone" />
+		</association>
+
+		<!-- product 테이블과의 JOIN 매핑 -->
+		<association property="product" javaType="product">
+			<id property="procode" column="procode" />
+			<result property="proname" column="proname" />
+			<result property="proprice" column="proprice" />
+			<result property="profile" column="profile" />
+		</association>
+	</resultMap>
+
+
+	<!-- 장바구니 가져오기 -->
+	<select id="cart_list" resultMap="CartResultMap">
+		SELECT c.cartcode, c.amount, c.mid, c.procode,
+		m.mname, m.memail, m.mphone,
+		p.proname, p.proprice, p.profile
+		FROM cart
+		c
+		JOIN member m ON c.mid = m.mid
+		JOIN product p ON c.procode = p.procode
+		WHERE c.mid = #{mid}
+	</select>
+	
+	<!--  아이디를 기준으로 장바구니 코드 가져오기 -->
+	<select id="get_cartcode" resultType="cart">
+		select c.cartcode from cart c
+		join member m on c.mid = m.mid where c.mid =#{mid}
+	</select>
+
+	<delete id="del_cart">
+		delete cart where cartcode = #{cartcode}
+	</delete>
+
+</mapper>

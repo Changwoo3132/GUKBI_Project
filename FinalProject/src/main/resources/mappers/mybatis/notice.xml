@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="Notice">
+
+    <select id="GetNoticeList" resultType="notice">
+        select * from (select NOTICE_NO, NOTICE_TITLE, NOTICE_DATE from NOTICE order by NOTICE_NO desc)
+        where rownum &lt;= 10
+    </select>
+
+    <select id="GetNoticeCont" parameterType="int" resultType="notice">
+        select * from NOTICE where NOTICE_NO=#{notice_no}
+    </select>
+</mapper>

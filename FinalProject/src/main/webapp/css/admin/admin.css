@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'MoveSans-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/MoveSans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+/* admin_index.jsp ui */
+#aLogin_wrap {
+    width: 340px;
+    height: 160px;
+    border: 1px solid pink;
+    box-shadow: 20px 20px 20px #ccc;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 170px;
+    border-radius: 25px;
+}
+
+#aLogin_wrap .aLogin_title {
+    margin: 20px 0 0 96px;
+    width: 140px;
+    font-size: 19px;
+    /*background: skyblue;*/
+    border-radius: 15px;
+    text-align: center;
+    padding: 2px;
+}
+
+#aLogin_t {
+    margin: 20px 0 0 10px;
+}
+
+/* admin_main.jsp ui */
+#aMain_wrap {
+    width: 99%;
+    height: 98%;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#aMain_header {
+    display: flex;
+    /*width: 100%;*/
+    height: 80px;
+    border: 1px solid #d1d1d1;
+    border-radius: 15px;
+    margin: 10px 0 0 0;
+    min-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#aMain_logo {
+    width: 150px;
+    height: 60px;
+    border-right: 1px solid #d1d1d1;
+}
+
+#aMain_logo > a {
+	font-family: 'MoveSans-Bold';
+	font-size: 20px;
+	color: black;
+	cursor: pointer;
+	display: flex;
+	padding-top: 15px;
+	text-decoration: none;
+	justify-content: center;
+}
+
+#aMain_menu {
+    height: 60px;
+    flex: 1;
+}
+
+#aMain_menu ul li {
+    float: left; /*수직정렬을 수평정렬로 바꾼다.*/
+    list-style: none; /*목록앞 점 없앰*/
+    margin-top: 5px;
+    padding: 0 9px; /*상하 안여백은 0픽셀,좌우 안여백은 9픽셀*/
+}
+
+#aMain_menu>ul>li>a {
+	text-decoration: none;
+	color: black;
+}
+
+#aMain_right {
+	height: 60px;
+    /*border-left: 1px solid #d1d1d1;*/
+}
+
+#aMain_right .aRight_title {
+	padding-top: 8px;
+	font-size: 13px;
+	display: flex;
+	/*margin-left: 10px;*/
+	margin: 0;
+	justify-content: center;
+}
+
+.clear {
+    clear: both;
+    /*위쪽 div가 float속성이 적용되었을때 빈공간이
+       발생하면 아래쪽 div가 위로 올라가서 ui가 깨진다. 이것을 막아
+       준다.결국은 div간 잘못된 css적용을 막아줌 */
+}
+
+#aMain_cont {
+	/*display: flex;*/
+	justify-content: center;
+	align-items: center;
+    width: 100%;
+    height: 780px;
+    border: 1px solid #d1d1d1;
+    border-radius: 15px;
+    margin: 10px 0 0 0;
+}
+
+#aMain_cont .aMainCont_title {
+    font-size: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#aMain_footer {
+    width: 840px;
+    height: 70px;
+    border: 1px solid #d1d1d1;
+    border-radius: 15px;
+    margin: 10px 0 0 10px;
+}
+
+#aMain_footer .aMainFooter_title {
+	margin: 0;
+	height: 100%;
+	font-size: 14px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#aMain_right>form>input[type="submit"]{
+	padding-left: 220px;
+	border: none;
+	background-color: white;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

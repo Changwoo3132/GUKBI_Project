@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+/* body 부분 css */
+
+/* 슬라이드 */
+/* 메인 이미지 부분 css */
+.wrapper {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.prev,
+.next {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    position: absolute;
+    transition: all 0.2s;
+    transform: translate(-50%, -50%);
+    top: 50%;
+}
+
+.wrapper .prev:hover,
+.wrapper .next:hover {
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.wrapper .prev {
+    left: 28px;
+}
+
+.wrapper .prev:hover {
+    transform: translate(-65%, -50%);
+}
+
+.wrapper .next {
+    right: 0;
+}
+
+.wrapper .next:hover {
+    transform: translate(-35%, -50%);
+}
+
+.wrapper .slider {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+}
+
+.wrapper .slider>div>img {
+    width: 100%;
+    height: auto;
+}
+
+/* 상품 목록 부분 css */
+.product {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    min-width: 1323px;
+}
+
+.product fieldset {
+    border: none;
+}
+
+.product legend {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product ul li {
+    padding: 0 35px;
+    box-sizing: border-box;
+    text-align: center;
+    list-style: none;
+    margin-top: 20px;
+}
+
+/* 윈도우랑 맥 사진이 똑같이 보이기 위해서 작성한 css */
+.product ul li img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+

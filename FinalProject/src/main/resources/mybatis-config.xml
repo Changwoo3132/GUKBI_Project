@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<!-- 데이터 저장빈 클래스 객체 별칭 이름을 관리해 주는 파일이다 -->
+<configuration>
+    <settings>
+        <setting name="jdbcTypeForNull" value="NULL"/>
+    </settings>
+    <typeAliases>
+        <typeAlias type="net.daum.vo.MemberVO" alias="member" />
+        <typeAlias type="net.daum.vo.BbsVO" alias="bbs" />
+        <typeAlias type="net.daum.vo.PageVO" alias="page" />
+        <typeAlias type="net.daum.vo.AdminVO" alias="admin" />
+        <typeAlias type="net.daum.vo.NoticeVO" alias="notice" />
+        <typeAlias type="net.daum.vo.CartVO" alias="cart" />
+        <typeAlias type="net.daum.vo.ProductVO" alias="product" />
+        <typeAlias type="net.daum.vo.Product2VO" alias="product2" />
+    </typeAliases>
+</configuration>

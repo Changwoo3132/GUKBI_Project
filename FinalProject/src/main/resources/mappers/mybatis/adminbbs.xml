@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="AdminBbs">
+    
+    <select id="t_count" resultType="int" parameterType="net.daum.vo.PageVO">
+        select count(bbs_no) from bbs
+        <where>
+            <if test="find_field == ''"></if>
+            <if test="find_field == 'bbs_title'">
+                bbs_title like '%' || #{find_name} || '%'
+            </if>
+            <if test="find_field == 'bbs_cont'">
+                bbs_cont like '%' || #{find_name} || '%'
+            </if>
+        </where>
+    </select>
+
+    <select id="t_user_bbs" parameterType="net.daum.vo.PageVO" resultType="net.daum.vo.BbsVO">
+        SELECT * FROM (
+        SELECT
+            A.*,
+            ROWNUM as rNum,
+            CASE
+                WHEN bbs_step = 0 THEN ROW_NUMBER() OVER (ORDER BY bbs_ref DESC)
+                ELSE NULL
+            END as bbs_seq_no
+        FROM (
+            SELECT
+                bbs_no,
+                bbs_title,
+                bbs_ref,
+                bbs_step,
+                bbs_level,
+                bbs_date
+            FROM bbs
+            <where>
+                <if test="find_field != null and find_field != ''">
+    <choose>
+        <when test="find_field == 'bbs_title'">
+            bbs_title like '%' || #{find_name} || '%'
+        </when>
+        <when test="find_field == 'bbs_cont'">
+            bbs_cont like '%' || #{find_name} || '%'
+        </when>
+    </choose>
+</if>
+        AND bbs_step = 0
+        </where>
+        ORDER BY bbs_ref DESC, bbs_step ASC
+        ) A
+        )
+        WHERE rNum &gt;= #{startrow} and rNum &lt;= #{endrow}
+    </select>
+
+    <select id="t_totalOriginalCount" parameterType="net.daum.vo.PageVO" resultType="int">
+        SELECT COUNT(*) FROM bbs WHERE bbs_step = 0
+        <if test="find_field != null and find_field != ''">
+            AND ${find_field} LIKE #{find_name}
+        </if>
+    </select>
+</mapper>

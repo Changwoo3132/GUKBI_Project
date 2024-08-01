@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="AdminNotice">
+
+    <select id="ListCount" resultType="int" parameterType="page">
+        select count(NOTICE_NO) from NOTICE
+        <where>
+            <if test="find_field == ''"></if> <!-- 전체 게시물수 -->
+            <if test="find_field == 'notice_title'"> <!-- 공지제목으로 검색할 때 -->
+                notice_title like #{find_name}
+            </if>
+            <if test="find_field == 'notice_cont'"> <!-- 공지내용으로 검색할 때 -->
+                notice_cont like #{find_name}
+            </if>
+        </where>
+    </select>
+
+    <select id="ListNotice" parameterType="page" resultType="notice">
+        select * from (select rowNum rNum, NOTICE_NO, NOTICE_NAME, NOTICE_TITLE, NOTICE_DATE from (select * from NOTICE
+            <where>
+                <if test="find_field == ''"></if>
+                <if test="find_field == 'notice_title'">notice_title like #{find_name}</if>
+                <if test="find_field == 'notice_cont'">notice_cont like #{find_name}</if>
+            </where>
+        order by notice_no desc))
+        where rNum >= #{startrow} and rNum &lt;= #{endrow}
+    </select>
+
+    <insert id="InsertNotice" parameterType="notice">
+        insert into NOTICE (NOTICE_NO, NOTICE_NAME, NOTICE_TITLE, NOTICE_CONT, NOTICE_DATE)
+        values (NOTICE_NO_SEQ.nextval, #{notice_name}, #{notice_title}, #{notice_cont}, sysdate)
+    </insert>
+
+    <select id="ContNotice" resultType="notice">
+        select * from NOTICE where NOTICE_NO=#{no}
+    </select>
+
+    <update id="EditNotice">
+        update NOTICE set NOTICE_NAME=#{notice_name}, NOTICE_TITLE=#{notice_title}, NOTICE_CONT=#{notice_cont}
+        where NOTICE_NO=#{notice_no}
+    </update>
+
+    <delete id="DelNotice" parameterType="int">
+        delete NOTICE where NOTICE_NO=#{no}
+    </delete>
+</mapper>

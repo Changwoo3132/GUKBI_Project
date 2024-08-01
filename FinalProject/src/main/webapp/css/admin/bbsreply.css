@@ -1,0 +1,115 @@
+/* Reset some basic elements for consistency across browsers */
+body, h2, table, th, td, form, input, button, a, textarea {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Main container */
+#bsW_wrap {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Header and title */
+.bsW_title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+/* Table styling */
+#bsW_t {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#bsW_t th, #bsW_t td {
+    padding: 10px;
+    text-align: left;
+}
+
+#bsW_t th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+}
+
+#bsW_t td {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Input and textarea styling */
+input[type="text"], textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Button styling */
+#bsW_menu input[type="submit"], #bsW_menu input[type="reset"], #bsW_menu input[type="button"] {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#bsW_menu input[type="submit"]:hover, #bsW_menu input[type="reset"]:hover, #bsW_menu input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+#bsW_menu {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Responsive design 반응형 웹 디자인 필요한가 ?
+@media (max-width: 768px) {
+    #bsW_wrap {
+        padding: 10px;
+    }
+
+    .bsW_title {
+        font-size: 20px;
+    }
+
+    #bsW_t th, #bsW_t td {
+        font-size: 14px;
+    }
+
+    #bsW_menu input[type="submit"], #bsW_menu input[type="reset"], #bsW_menu input[type="button"] {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}
+*/
